@@ -22,23 +22,35 @@ namespace SimpleCalculator
             Console.WriteLine("9.  Faktoriál");
             Console.WriteLine("10. Logaritmus");
             Console.WriteLine("11. Prevod stupňov na radiány");
-            Console.WriteLine("12. Prevod radiánov na stupne");            
+            Console.WriteLine("12. Prevod radiánov na stupne");
 
-            bool correctOperation = false;
-            int operation = 0;
-            while (!correctOperation)
-            {
-                Console.WriteLine();
-                Console.Write("Vaša voľba: ");
-                string userInput = Console.ReadLine();
-
-                correctOperation = int.TryParse(userInput, out operation);
-            }
-
+            int operation = GetIntegerNumber("Vaša voľba: ");
             ProcessOperation(operation);
 
             Console.ReadKey();
         }
+
+        /// <summary>
+        /// Gets integer number from console input.
+        /// </summary>
+        /// <param name="prompt">Console prompt for inputting number.</param>
+        /// <returns>Number.</returns>
+        private static int GetIntegerNumber(string prompt)
+        {
+            bool correctNumber = false;
+            int number = 0;
+
+            while (!correctNumber)
+            {
+                Console.WriteLine();
+                Console.Write(prompt);
+                string userInput = Console.ReadLine();
+
+                correctNumber = int.TryParse(userInput, out number);
+            }
+
+            return number;
+        }        
 
         /// <summary>
         /// Process chosen operation.
