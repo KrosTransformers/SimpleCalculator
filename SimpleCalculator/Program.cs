@@ -128,7 +128,6 @@ namespace SimpleCalculator
             {
                 Console.WriteLine("Nulou sa neda delit");
             }
-            break;
         }
 
         
