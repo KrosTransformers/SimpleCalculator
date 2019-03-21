@@ -62,6 +62,8 @@ namespace SimpleCalculator
 
             return number;
         }
+
+
         /// <summary>
         /// Operácia sčítanie
         /// </summary>
@@ -72,6 +74,7 @@ namespace SimpleCalculator
             int num3 = num1 + num2;
             Console.Write($"\nVýsledok je:  {num3}");
         }
+
 
         /// <summary>
         /// Process chosen operation.
@@ -117,7 +120,7 @@ namespace SimpleCalculator
                     break;
 
                 case 9:
-                    Console.WriteLine("Operation not implemented.");
+                    Console.WriteLine(SolveFactorial(GetIntegerNumber("zadaj cislo")));
                     break;
 
                 case 10:
@@ -138,6 +141,16 @@ namespace SimpleCalculator
                     break;
             }
         }
+ 
+        static int SolveFactorial(int number)
+        {
+            if (number <= 1)
+            {
+                return 1;
+            }
+            return number * SolveFactorial(number - 1);
+        }
+
 
         private static void Devide(double a, double b)
         {
@@ -176,7 +189,7 @@ namespace SimpleCalculator
 
             Console.WriteLine($"Degrees:{ (CheckDouble() * (180.0 / Math.PI))}");
             
+
         }
     }
-
 }
