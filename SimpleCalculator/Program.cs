@@ -35,6 +35,26 @@ namespace SimpleCalculator
         /// </summary>
         /// <param name="prompt">Console prompt for inputting number.</param>
         /// <returns>Number.</returns>
+        /// 
+
+        private static double DruhaOdmocnina()
+        {
+            Console.WriteLine("zadaj číslo, z ktorého chceš spraviť druhú odmocninu");
+           
+            while (true)
+            {
+                if(double.TryParse(Console.ReadLine(), out double ret))                
+                {
+                    double odmocnina = Math.Sqrt(ret);
+                    Console.WriteLine("Druhá odmocnina z čísla " + ret + " je: " + odmocnina);
+                    return odmocnina;
+                }
+                Console.WriteLine("Zadaj číslo");                              
+            }
+            
+
+
+        }
         private static int GetIntegerNumber(string prompt)
         {
             bool correctNumber = false;
@@ -89,7 +109,7 @@ namespace SimpleCalculator
                     break;
 
                 case 8:
-                    Console.WriteLine("Operation not implemented.");
+                    DruhaOdmocnina();
                     break;
 
                 case 9:
