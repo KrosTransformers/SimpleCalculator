@@ -228,7 +228,7 @@ namespace SimpleCalculator
 
         private static void Devide(double a, double b)
         {
-            if (b > 0) { Console.WriteLine(@"Result: " + a / b); }
+            if (b == 0) { Console.WriteLine(@"Result: " + a / b); }
             else { Console.WriteLine("Devided by zero"); }
             
         }
