@@ -20,7 +20,7 @@ namespace SimpleCalculator
             while (!temp)
             {
                 Console.WriteLine("Zadajte zaklad ktorym chcete logaritmovat");
-                double.TryParse(Console.ReadLine(), out numberLogBase);
+                temp = double.TryParse(Console.ReadLine(), out numberLogBase);
             }
             double result = Math.Log(numberLog, numberLogBase);
             Console.WriteLine($"Vysledok je {result}");
