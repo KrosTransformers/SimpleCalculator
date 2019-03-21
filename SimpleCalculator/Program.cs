@@ -69,6 +69,7 @@ namespace SimpleCalculator
                     break;
 
                 case 3:
+                    Operacia3();
                     Console.WriteLine("Operation not implemented.");
                     break;
 
@@ -112,6 +113,13 @@ namespace SimpleCalculator
                     Console.WriteLine("Invalid operation.");
                     break;
             }
+        }
+
+        private static void Operacia3()
+        {            
+            int a = GetIntegerNumber("First number: ");
+            int b = GetIntegerNumber("Second number: ");
+            Console.WriteLine(a * b);
         }
 
     }
