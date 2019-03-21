@@ -61,11 +61,13 @@ namespace SimpleCalculator
             switch (operation)
             {
                 case 1:
+                    
                     Console.WriteLine("Operation not implemented.");
                     break;
 
                 case 2:
-                    Console.WriteLine("Operation not implemented.");
+
+                    Minus();
                     break;
 
                 case 3:
@@ -112,6 +114,15 @@ namespace SimpleCalculator
                     Console.WriteLine("Invalid operation.");
                     break;
             }
+        }
+
+        private static void Minus()
+        {
+            int a = GetIntegerNumber("Zadaj číslo, od ktorého chceš odčítať: ");
+            int b = GetIntegerNumber("Zadaj číslo, ktoré chceš odčítať: ");
+            Console.WriteLine();
+            Console.WriteLine($"Vysledok je: {a-b}");
+            
         }
 
     }
