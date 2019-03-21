@@ -130,7 +130,6 @@ namespace SimpleCalculator
                     break;
 
                 case 12:
-                    Operation12();
                     break;
 
                 default:
@@ -143,38 +142,6 @@ namespace SimpleCalculator
         {
             if (b > 0) { Console.WriteLine(@"Result: " + a / b); }
             else { Console.WriteLine("Devided by zero"); }
-            
-        }
-
-        private static double CheckDouble()
-        {
-            //checks if the input is good
-            double result;
-            while (true)
-            {
-
-                
-                string input = Console.ReadLine();
-
-                if (double.TryParse(input, out result))
-                {
-                    
-                        return result;
-                  
-                }
-                else
-                {
-                    Console.WriteLine("Wrong format Try Again");
-                }
-            }
-
-        }
-
-        private static  void Operation12()
-        {
-            Console.WriteLine("Enter radian");
-
-            Console.WriteLine($"Degrees:{ (CheckDouble() * (180.0 / Math.PI))}");
             
         }
     }
