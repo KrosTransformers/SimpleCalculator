@@ -70,7 +70,6 @@ namespace SimpleCalculator
 
                 case 3:
                     Operacia3();
-                    Console.WriteLine("Operation not implemented.");
                     break;
 
                 case 4:
