@@ -50,7 +50,7 @@ namespace SimpleCalculator
             }
 
             return number;
-        }        
+        }
 
         /// <summary>
         /// Process chosen operation.
@@ -93,7 +93,7 @@ namespace SimpleCalculator
                     break;
 
                 case 9:
-                    Console.WriteLine("Operation not implemented.");
+                    Console.WriteLine(SolveFactorial(GetIntegerNumber("zadaj cislo")));
                     break;
 
                 case 10:
@@ -113,7 +113,13 @@ namespace SimpleCalculator
                     break;
             }
         }
-
+        static int SolveFactorial(int number)
+        {
+            if (number <= 1)
+            {
+                return 1;
+            }
+            return number * SolveFactorial(number - 1);
+        }
     }
-
 }
