@@ -50,7 +50,7 @@ namespace SimpleCalculator
             }
 
             return number;
-        }        
+        }
 
         /// <summary>
         /// Process chosen operation.
@@ -101,7 +101,9 @@ namespace SimpleCalculator
                     break;
 
                 case 11:
-                    Console.WriteLine("Operation not implemented.");
+                    //Console.WriteLine("Operation not implemented.");
+                    Console.WriteLine(degToRad());
+                    Console.ReadKey();
                     break;
 
                 case 12:
@@ -112,6 +114,20 @@ namespace SimpleCalculator
                     Console.WriteLine("Invalid operation.");
                     break;
             }
+        }
+
+        public static double degToRad()
+        {
+
+            double angle;
+            while (true)
+            {
+                Console.WriteLine("Prosím zadajte uhol ktorý chcete konvertovať");
+                if (double.TryParse(Console.ReadLine(), out angle))
+                { return (Math.PI / 180) * (angle); }
+                else { Console.WriteLine("Wrong input, please put in a number. Press any key to try again"); Console.ReadKey(); }
+            }
+            
         }
 
     }
