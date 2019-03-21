@@ -5,6 +5,17 @@ namespace SimpleCalculator
 
     class Program
     {
+        public static void Funcion10()
+        {
+            Console.WriteLine("Zvolili ste si Logaritmus");
+            Console.WriteLine("Zadajte cislo, ktore chcete zlogaritmovat");            
+            double.TryParse(Console.ReadLine(), out double numberLog);
+            Console.WriteLine("Zadajte zaklad ktorym chcete logaritmovat");
+            double.TryParse(Console.ReadLine(), out double numberLogBase);
+            double result = Math.Log(numberLog, numberLogBase);
+            Console.WriteLine($"Vysledok je {result}");
+            Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
@@ -97,7 +108,8 @@ namespace SimpleCalculator
                     break;
 
                 case 10:
-                    Console.WriteLine("Operation not implemented.");
+                    Funcion10();
+                    //Console.WriteLine("Operation not implemented.");
                     break;
 
                 case 11:
