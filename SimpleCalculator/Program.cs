@@ -61,7 +61,17 @@ namespace SimpleCalculator
             }
 
             return number;
-        }        
+        }
+        /// <summary>
+        /// Operácia sčítanie
+        /// </summary>
+        public static void Plus()
+        {
+            int num1 = GetIntegerNumber("Zadaj číslo1: ");
+            int num2 = GetIntegerNumber("Zadaj číslo2: ");
+            int num3 = num1 + num2;
+            Console.Write($"\nVýsledok je:  {num3}");
+        }
 
         /// <summary>
         /// Process chosen operation.
@@ -72,7 +82,7 @@ namespace SimpleCalculator
             switch (operation)
             {
                 case 1:
-                    Console.WriteLine("Operation not implemented.");
+                    Plus();
                     break;
 
                 case 2:
