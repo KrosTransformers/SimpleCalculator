@@ -94,7 +94,7 @@ namespace SimpleCalculator
                     break;
 
                 case 3:
-                    Console.WriteLine("Operation not implemented.");
+                    Operacia3();
                     break;
 
                 case 4:
@@ -150,6 +150,15 @@ namespace SimpleCalculator
                 return 1;
             }
             return number * SolveFactorial(number - 1);
+        }
+
+
+
+        private static void Operacia3()
+        {            
+            int a = GetIntegerNumber("First number: ");
+            int b = GetIntegerNumber("Second number: ");
+            Console.WriteLine(a * b);
         }
 
 
@@ -209,5 +218,6 @@ namespace SimpleCalculator
             
 
         }
+
     }
 }
