@@ -88,8 +88,7 @@ namespace SimpleCalculator
                     else
                     {
                         Console.WriteLine("Nulou sa neda delit");
-                    }
-                    
+                    }                    
                     break;
 
                 case 6:
