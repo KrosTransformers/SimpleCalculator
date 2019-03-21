@@ -5,6 +5,17 @@ namespace SimpleCalculator
 
     class Program
     {
+        public static void Funcion10()
+        {
+            Console.WriteLine("Zvolili ste si Logaritmus");
+            Console.WriteLine("Zadajte cislo, ktore chcete zlogaritmovat");            
+            double.TryParse(Console.ReadLine(), out double numberLog);
+            Console.WriteLine("Zadajte zaklad ktorym chcete logaritmovat");
+            double.TryParse(Console.ReadLine(), out double numberLogBase);
+            double result = Math.Log(numberLog, numberLogBase);
+            Console.WriteLine($"Vysledok je {result}");
+            Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
@@ -50,7 +61,17 @@ namespace SimpleCalculator
             }
 
             return number;
-        }        
+        }
+        /// <summary>
+        /// Operácia sčítanie
+        /// </summary>
+        public static void Plus()
+        {
+            int num1 = GetIntegerNumber("Zadaj číslo1: ");
+            int num2 = GetIntegerNumber("Zadaj číslo2: ");
+            int num3 = num1 + num2;
+            Console.Write($"\nVýsledok je:  {num3}");
+        }
 
         /// <summary>
         /// Process chosen operation.
@@ -61,7 +82,7 @@ namespace SimpleCalculator
             switch (operation)
             {
                 case 1:
-                    Console.WriteLine("Operation not implemented.");
+                    Plus();
                     break;
 
                 case 2:
@@ -100,7 +121,8 @@ namespace SimpleCalculator
                     break;
 
                 case 10:
-                    Console.WriteLine("Operation not implemented.");
+                    Funcion10();
+                    //Console.WriteLine("Operation not implemented.");
                     break;
 
                 case 11:
@@ -108,7 +130,7 @@ namespace SimpleCalculator
                     break;
 
                 case 12:
-                    Console.WriteLine("Operation not implemented.");
+                    Operation12();
                     break;
 
                 default:
@@ -124,6 +146,37 @@ namespace SimpleCalculator
             
         }
 
+        private static double CheckDouble()
+        {
+            //checks if the input is good
+            double result;
+            while (true)
+            {
+
+                
+                string input = Console.ReadLine();
+
+                if (double.TryParse(input, out result))
+                {
+                    
+                        return result;
+                  
+                }
+                else
+                {
+                    Console.WriteLine("Wrong format Try Again");
+                }
+            }
+
+        }
+
+        private static  void Operation12()
+        {
+            Console.WriteLine("Enter radian");
+
+            Console.WriteLine($"Degrees:{ (CheckDouble() * (180.0 / Math.PI))}");
+            
+        }
     }
 
 }
