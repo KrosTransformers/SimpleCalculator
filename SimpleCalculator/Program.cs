@@ -5,7 +5,7 @@ namespace SimpleCalculator
 
     class Program
     {
-
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Simple Calculator");
@@ -45,12 +45,23 @@ namespace SimpleCalculator
                 Console.WriteLine();
                 Console.Write(prompt);
                 string userInput = Console.ReadLine();
-
+                
                 correctNumber = int.TryParse(userInput, out number);
             }
+            
 
             return number;
-        }        
+        }
+        
+      
+     
+        public static double druhaMocnina(double a)
+        {
+            return a *  a;
+        }
+
+
+        
 
         /// <summary>
         /// Process chosen operation.
@@ -58,6 +69,7 @@ namespace SimpleCalculator
         /// <param name="operation">Operation.</param>
         private static void ProcessOperation(int operation)
         {
+            string userInput = Console.ReadLine();
             switch (operation)
             {
                 case 1:
@@ -89,7 +101,8 @@ namespace SimpleCalculator
                     break;
 
                 case 8:
-                    Console.WriteLine("Operation not implemented.");
+                   
+                    Console.WriteLine(druhaMocnina(double.Parse (userInput) ) );
                     break;
 
                 case 9:
@@ -113,6 +126,8 @@ namespace SimpleCalculator
                     break;
             }
         }
+
+
 
     }
 
