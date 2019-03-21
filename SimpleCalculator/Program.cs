@@ -73,7 +73,12 @@ namespace SimpleCalculator
                     break;
 
                 case 4:
-                    Console.WriteLine("Operation not implemented.");
+                    Console.WriteLine("You choose operation devide");
+                    double a;
+                    double b;
+                    a = GetIntegerNumber("Type number to devide: ");
+                    b = GetIntegerNumber("Type number by which to devide");
+                    Devide(a, b);
                     break;
 
                 case 5:
@@ -112,6 +117,13 @@ namespace SimpleCalculator
                     Console.WriteLine("Invalid operation.");
                     break;
             }
+        }
+
+        private static void Devide(double a, double b)
+        {
+            if (b > 0) { Console.WriteLine(@"Result: " + a / b); }
+            else { Console.WriteLine("Devided by zero"); }
+            
         }
 
     }
