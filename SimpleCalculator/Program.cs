@@ -30,6 +30,19 @@ namespace SimpleCalculator
             Console.ReadKey();
         }
 
+
+        public static void ZvysokPoDeleni()
+        {
+            Console.WriteLine("zadaj cislo");
+            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("zadaj druhe cislo");
+            double b = double.Parse(Console.ReadLine());
+            double c = a % b;
+            Console.WriteLine("Zvysok po deleni je:/n" + c);
+
+        }
+
+ 
         /// <summary>
         /// Gets integer number from console input.
         /// </summary>
@@ -80,8 +93,8 @@ namespace SimpleCalculator
                     Console.WriteLine("Operation not implemented.");
                     break;
 
-                case 6:
-                    Console.WriteLine("Operation not implemented.");
+                case 6: 
+                    ZvysokPoDeleni();
                     break;
 
                 case 7:
