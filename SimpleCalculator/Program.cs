@@ -73,11 +73,9 @@ namespace SimpleCalculator
                     break;
 
                 case 4:
-                    Console.WriteLine("You choose operation devide");
-                    double a;
-                    double b;
-                    a = GetIntegerNumber("Type number to devide: ");
-                    b = GetIntegerNumber("Type number by which to devide");
+                    Console.WriteLine("You choose operation devide");              
+                    double a = GetIntegerNumber("Type number to devide: ");
+                    double b = GetIntegerNumber("Type number by which to devide");
                     Devide(a, b);
                     break;
 
