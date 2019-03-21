@@ -58,6 +58,7 @@ namespace SimpleCalculator
         /// <param name="operation">Operation.</param>
         private static void ProcessOperation(int operation)
         {
+            
             switch (operation)
             {
                 case 1:
@@ -77,7 +78,18 @@ namespace SimpleCalculator
                     break;
 
                 case 5:
-                    Console.WriteLine("Operation not implemented.");
+                    int a = GetIntegerNumber("Zadaj prve cislo: ");
+                    int b = GetIntegerNumber("Zadaj druhe cislo: ");
+                    if (b != 0)
+                    {
+                        int vysledok = a / b;
+                        Console.WriteLine($"Vysledok: {vysledok}");                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nulou sa neda delit");
+                    }
+                    
                     break;
 
                 case 6:
@@ -114,6 +126,7 @@ namespace SimpleCalculator
             }
         }
 
+        
     }
 
 }
