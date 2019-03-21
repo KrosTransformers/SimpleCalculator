@@ -78,17 +78,7 @@ namespace SimpleCalculator
                     break;
 
                 case 5:
-                    int a = GetIntegerNumber("Zadaj prve cislo: ");
-                    int b = GetIntegerNumber("Zadaj druhe cislo: ");
-                    if (b != 0)
-                    {
-                        int vysledok = a / b;
-                        Console.WriteLine($"Vysledok: {vysledok}");                        
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nulou sa neda delit");
-                    }                    
+                    CelociselneDelenie();            
                     break;
 
                 case 6:
@@ -123,6 +113,22 @@ namespace SimpleCalculator
                     Console.WriteLine("Invalid operation.");
                     break;
             }
+        }
+
+        private static void CelociselneDelenie()
+        {
+            int a = GetIntegerNumber("Zadaj prve cislo: ");
+            int b = GetIntegerNumber("Zadaj druhe cislo: ");
+            if (b != 0)
+            {
+                int vysledok = a / b;
+                Console.WriteLine($"Vysledok: {vysledok}");
+            }
+            else
+            {
+                Console.WriteLine("Nulou sa neda delit");
+            }
+            break;
         }
 
         
