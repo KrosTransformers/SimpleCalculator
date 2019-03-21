@@ -88,7 +88,6 @@ namespace SimpleCalculator
             Console.Write($"\nVýsledok je:  {num3}");
         }
 
-
         /// <summary>
         /// Process chosen operation.
         /// </summary>
@@ -143,7 +142,9 @@ namespace SimpleCalculator
                     break;
 
                 case 11:
-                    Console.WriteLine("Operation not implemented.");
+                    //Console.WriteLine("Operation not implemented.");
+                    Console.WriteLine(degToRad());
+                    Console.ReadKey();
                     break;
 
                 case 12:
@@ -163,6 +164,20 @@ namespace SimpleCalculator
                 return 1;
             }
             return number * SolveFactorial(number - 1);
+        }
+
+        public static double degToRad()
+        {
+
+            double angle;
+            while (true)
+            {
+                Console.WriteLine("Prosím zadajte uhol ktorý chcete konvertovať");
+                if (double.TryParse(Console.ReadLine(), out angle))
+                { return (Math.PI / 180) * (angle); }
+                else { Console.WriteLine("Wrong input, please put in a number. Press any key to try again"); Console.ReadKey(); }
+            }
+            
         }
 
         private static void Minus()
