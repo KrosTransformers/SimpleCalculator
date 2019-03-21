@@ -7,11 +7,21 @@ namespace SimpleCalculator
     {
         public static void Funcion10()
         {
+            double numberLog=0;
+            double numberLogBase=0;
+            bool temp = false;
             Console.WriteLine("Zvolili ste si Logaritmus");
-            Console.WriteLine("Zadajte cislo, ktore chcete zlogaritmovat");            
-            double.TryParse(Console.ReadLine(), out double numberLog);
-            Console.WriteLine("Zadajte zaklad ktorym chcete logaritmovat");
-            double.TryParse(Console.ReadLine(), out double numberLogBase);
+            while (!temp)
+            {
+                Console.WriteLine("Zadajte cislo, ktore chcete zlogaritmovat");
+                temp = double.TryParse(Console.ReadLine(), out numberLog);
+            }
+            temp = false;
+            while (!temp)
+            {
+                Console.WriteLine("Zadajte zaklad ktorym chcete logaritmovat");
+                double.TryParse(Console.ReadLine(), out numberLogBase);
+            }
             double result = Math.Log(numberLog, numberLogBase);
             Console.WriteLine($"Vysledok je {result}");
             Console.ReadLine();
